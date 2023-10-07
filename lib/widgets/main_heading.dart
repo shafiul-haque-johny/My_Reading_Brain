@@ -18,7 +18,7 @@ class MainHeading                                                               
             ),
             width: screenSize.width,
             child: Text(
-              'Knowledge diversity',
+              'Knowledge Diversity',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 40,

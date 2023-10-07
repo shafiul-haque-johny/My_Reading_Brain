@@ -10,9 +10,9 @@ class FeaturedTiles extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/test1.jpeg',
-    'assets/images/test2.jpeg',
-    'assets/images/test3.jpeg',
+    'assets/images/test1.jpg',
+    'assets/images/test2.jpg',
+    'assets/images/test3.jpg',
   ];
 
   final List<String> title = ['Sci-fi', 'Photography', 'Romance'];
@@ -85,23 +85,22 @@ class FeaturedTiles extends StatelessWidget {
                         width: screenSize.width / 3.8,
                         child: Container(
                           decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(20.0),
-                            image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              assets[pageIndex],
-                             // fit: BoxFit.cover,
-                            ),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0, 10),
-                                blurRadius: 20,
-                                spreadRadius: 5,
-                                color:Colors.grey.withOpacity(0.3),
-                              )
-                            ]
-                          ),
+                              borderRadius: BorderRadius.circular(20.0),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                  assets[pageIndex],
+                                  // fit: BoxFit.cover,
+                                ),
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: Offset(0, 10),
+                                  blurRadius: 20,
+                                  spreadRadius: 5,
+                                  color: Colors.grey.withOpacity(0.3),
+                                )
+                              ]),
                         ),
                       ),
                       Padding(

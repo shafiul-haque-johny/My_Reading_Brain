@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> {
         child: TopBarContents(_opacity),
       ),
       body: SingleChildScrollView(
+        controller: _scrollController,
         child: Column(
           children: [
             Stack(
@@ -69,6 +70,12 @@ class _HomePageState extends State<HomePage> {
                     FeaturedTiles(
                       screenSize: screenSize,
                     ),
+                    MainHeading(
+                      screenSize: screenSize,
+                    ),
+                    MainCarousel(),
+                    SizedBox(height: screenSize.height / 10),
+                    BottomBar(),
                   ],
                 ),
               ],
