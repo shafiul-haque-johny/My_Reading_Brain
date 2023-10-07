@@ -1,0 +1,40 @@
+name: flutter_web
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  carousel_slider: ^4.2.1
+  http:
+  shared_preferences: ^2.2.1
+  # shared_preferences: ^2.0.0-nullsafety
+  chewie: ^1.7.1
+  video_player: ^2.7.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Regular.ttf
+
+    - family: Electrolize
+      fonts:
+        - asset: fonts/Electrolize-Regular.ttf
+
+  assets:
+    - assets/images/
