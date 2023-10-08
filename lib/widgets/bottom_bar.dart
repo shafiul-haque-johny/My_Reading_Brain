@@ -25,60 +25,131 @@ class BottomBar extends StatelessWidget {
       ),
       padding: EdgeInsets.all(30),
       //color: Colors.blueGrey[900],
-      child: Column(
-        children: [
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              BottomBarColumn(
-                heading: 'ABOUT',
-                s1: 'Contact Us',
-                s2: 'About Us',
-                s3: 'Careers',
-              ),
-              Container(
-                color: Colors.white,
-                width: 2,
-                height: 150,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  InfoText(
-                    type: 'Email',
-                    text: 'bafhaque@gmail.com',
+      child: MediaQuery.of(context).size.width < 800
+          ? Column(
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    BottomBarColumn(
+                      heading: 'ABOUT',
+                      s1: 'Contact Us',
+                      s2: 'About Us',
+                      s3: 'Careers',
+                    ),
+                    BottomBarColumn(
+                      heading: 'HELP',
+                      s1: 'Payment',
+                      s2: 'Cancellation',
+                      s3: 'FAQ',
+                    ),
+                    BottomBarColumn(
+                      heading: 'SOCIAL',
+                      s1: 'Facebook',
+                      s2: 'Twitter',
+                      s3: 'YouTube',
+                    ),
+                  ],
+                ),
+                Divider(
+                  color: Colors.white70,
+                ),
+                SizedBox(height: 10),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    InfoText(
+                      type: 'Email',
+                      text: 'bafhaque@gmail.com',
+                    ),
+                    SizedBox(height: 5),
+                    InfoText(
+                      type: 'Address',
+                      text: 'Mohammadpur, Dhaka, Bangladesh',
+                    )
+                  ],
+                ),
+                SizedBox(height: 10),
+                Divider(
+                  color: Colors.white70,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Designed By JohnyShafiul',
+                  style: TextStyle(
+                    color: Colors.blueGrey[200],
+                    fontSize: 14,
                   ),
-                  SizedBox(height: 5),
-                  InfoText(
-                    type: 'Address',
-                    text: 'Mohammadpur, Dhaka, Bangladesh',
-                  )
-                ],
-              ),
-            ],
-          ),
-          Divider(
-            color: Colors.white,
-          ),
-          SizedBox(height: 20),
-          Text(
-            '© Copyright JohnyShafiul | All rights are reserved 2021-2023.',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 14,
+                ),
+              ],
+            )
+          : Column(
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    BottomBarColumn(
+                      heading: 'ABOUT',
+                      s1: 'Contact Us',
+                      s2: 'About Us',
+                      s3: 'Careers',
+                    ),
+                    BottomBarColumn(
+                      heading: 'HELP',
+                      s1: 'Payment',
+                      s2: 'Cancellation',
+                      s3: 'FAQ',
+                    ),
+                    BottomBarColumn(
+                      heading: 'SOCIAL',
+                      s1: 'Facebook',
+                      s2: 'Twitter',
+                      s3: 'YouTube',
+                    ),
+                    Container(
+                      color: Colors.white70,
+                      width: 2,
+                      height: 150,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        InfoText(
+                          type: 'Email',
+                          text: 'bafhaque@gmail.com',
+                        ),
+                        SizedBox(height: 5),
+                        InfoText(
+                          type: 'Address',
+                          text: 'Mohammadpur, Dhaka, Bangladesh',
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                Divider(
+                  color: Colors.white70,
+                ),
+                SizedBox(height: 20),
+                Text(
+                  '© Copyright JohnyShafiul | All rights are reserved 2021-2023.',
+                  style: TextStyle(
+                    color: Colors.blueGrey[200],
+                    fontSize: 14,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  'Designed By JohnyShafiul',
+                  style: TextStyle(
+                    color: Colors.blueGrey[200],
+                    fontSize: 14,
+                  ),
+                ),
+              ],
             ),
-          ),
-          SizedBox(height: 5),
-          Text(
-            'Designed By JohnyShafiul',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

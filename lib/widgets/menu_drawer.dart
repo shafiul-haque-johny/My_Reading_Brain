@@ -9,9 +9,16 @@ class MenuDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Color(0xFF6158e6),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xff05756c),
+              Color(0xff033c75),
+            ],
+          ),
+        ),
+        //color: Color(0xff3d31ec),
         child: Padding(
-
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -20,7 +27,7 @@ class MenuDrawer extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: Text(
-                  'Login',
+                  'Home',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -34,7 +41,7 @@ class MenuDrawer extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: Text(
-                  'Sign Up',
+                  'About',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -70,9 +77,9 @@ class MenuDrawer extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    'Copyright © 2021 | DBestech',
+                    'Copyright © 2023 | JohnyShafiul',
                     style: TextStyle(
-                      color: Colors.blueGrey.shade300,
+                      color: Colors.white70,
                       fontSize: 14,
                     ),
                   ),
