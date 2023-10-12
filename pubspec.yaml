@@ -16,7 +16,6 @@ dependencies:
   carousel_slider: ^4.2.1
   http:
   shared_preferences: ^2.2.1
-  # shared_preferences: ^2.0.0-nullsafety
   chewie: ^1.7.1
   video_player: ^2.7.2
 
