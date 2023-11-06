@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/screens/about_page.dart';
+import 'package:flutter_web/screens/home_page.dart';
 
 class TopBarContents extends StatefulWidget {
   final double opacity;
@@ -56,7 +58,11 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[0] = true : _isHovering[0] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (index) => HomePage(),
+                      ),
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -92,7 +98,11 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[1] = true : _isHovering[1] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => AboutPage(),
+                      ),
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [

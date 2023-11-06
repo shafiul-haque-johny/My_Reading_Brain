@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/screens/about_page.dart';
+import 'package:flutter_web/screens/home_page.dart';
 
 class MenuDrawer extends StatelessWidget {
   const MenuDrawer({
@@ -25,7 +27,11 @@ class MenuDrawer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                ),
                 child: Text(
                   'Home',
                   style: TextStyle(color: Colors.white, fontSize: 22),
@@ -39,7 +45,11 @@ class MenuDrawer extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AboutPage(),
+                  ),
+                ),
                 child: Text(
                   'About',
                   style: TextStyle(color: Colors.white, fontSize: 22),
