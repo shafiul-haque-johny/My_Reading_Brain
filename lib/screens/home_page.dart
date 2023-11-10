@@ -9,6 +9,8 @@ import 'package:flutter_web/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  static const String id = 'home_page';
+
   @override
   _HomePageState createState() => _HomePageState();
 }

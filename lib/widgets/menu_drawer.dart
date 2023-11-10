@@ -27,10 +27,9 @@ class MenuDrawer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               InkWell(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => HomePage(),
-                  ),
+                onTap: () => Navigator.pushNamed(
+                  context,
+                  HomePage.id,
                 ),
                 child: Text(
                   'Home',
@@ -45,10 +44,9 @@ class MenuDrawer extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => AboutPage(),
-                  ),
+                onTap: () => Navigator.pushNamed(
+                  context,
+                  '/about',
                 ),
                 child: Text(
                   'About',
@@ -77,7 +75,10 @@ class MenuDrawer extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => Navigator.pushNamed(
+                  context,
+                  '/contact',
+                ),
                 child: Text(
                   'Contact Us',
                   style: TextStyle(color: Colors.white, fontSize: 22),

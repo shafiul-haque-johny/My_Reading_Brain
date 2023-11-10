@@ -4,16 +4,16 @@ import '../widgets/bottom_bar.dart';
 import '../widgets/menu_drawer.dart';
 import '../widgets/top_bar_contents.dart';
 
-class AboutPage extends StatefulWidget {
-  static const String id = 'about_page';
+class ContactPage extends StatefulWidget {
+  static const String id = 'contact_page';
 
-  const AboutPage({Key? key}) : super(key: key);
+  const ContactPage({Key? key}) : super(key: key);
 
   @override
-  State<AboutPage> createState() => _AboutPageState();
+  State<ContactPage> createState() => _ContactPageState();
 }
 
-class _AboutPageState extends State<AboutPage> {
+class _ContactPageState extends State<ContactPage> {
   final ScrollController _scrollController = ScrollController();
 
   double _scrollPosition = 0;
@@ -84,7 +84,7 @@ class _AboutPageState extends State<AboutPage> {
                   children: [
                     SizedBox(height: screenSize.height / 1.4),
                     Text(
-                      'About',
+                      'Contact Us',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
@@ -131,6 +131,17 @@ class _AboutPageState extends State<AboutPage> {
                       'Md. Shafiul Haque Johny',
                       style: TextStyle(
                         fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xff05756c),
+                      ),
+                    ),
+                    SizedBox(height: screenSize.height / 20),
+                    Text(
+                      'Mobile: 01799382811 \n'
+                      'Email: bafhaque@gmail.com \n'
+                      'Address: Dhaka, Bangladesh',
+                      style: TextStyle(
+                        fontSize: 15,
                         fontWeight: FontWeight.w600,
                         color: Color(0xff05756c),
                       ),

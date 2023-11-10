@@ -58,10 +58,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[0] = true : _isHovering[0] = false;
                       });
                     },
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (index) => HomePage(),
-                      ),
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      HomePage.id,
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -98,10 +97,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[1] = true : _isHovering[1] = false;
                       });
                     },
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => AboutPage(),
-                      ),
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      '/about',
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -246,7 +244,10 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[5] = true : _isHovering[5] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      '/contact',
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
