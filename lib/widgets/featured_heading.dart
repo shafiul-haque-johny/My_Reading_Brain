@@ -5,9 +5,13 @@ class FeaturedHeading extends StatelessWidget {
   const FeaturedHeading({
     Key? key,
     required this.screenSize,
+    required this.feature,
+    required this.text,
   }) : super(key: key);
 
   final Size screenSize;
+  final String feature;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class FeaturedHeading extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Featured',
+                      '$feature',
                       style: TextStyle(
                         fontSize: 36,
                         fontFamily: 'Raleway',
@@ -34,7 +38,7 @@ class FeaturedHeading extends StatelessWidget {
                     ),
                     SizedBox(height: 5),
                     Text(
-                      'Clue of the wooden cottage',
+                      '$text',
                     ),
                   ],
                 ),
@@ -45,7 +49,7 @@ class FeaturedHeading extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  'Featured',
+                  '$feature',
                   style: TextStyle(
                     fontSize: 36,
                     fontFamily: 'Raleway',
@@ -55,7 +59,7 @@ class FeaturedHeading extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    'Clue of the wooden cottage',
+                    '$text',
                     textAlign: TextAlign.end,
                   ),
                 ),

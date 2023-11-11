@@ -136,7 +136,10 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[2] = true : _isHovering[2] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      '/library',
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [

@@ -1,22 +1,23 @@
-import 'package:flutter_web/widgets/bottom_bar.dart';
-import 'package:flutter_web/widgets/carousel.dart';
-import 'package:flutter_web/widgets/featured_heading.dart';
-import 'package:flutter_web/widgets/featured_tiles.dart';
-import 'package:flutter_web/widgets/floating_quick_access_bar.dart';
-import 'package:flutter_web/widgets/main_heading.dart';
-import 'package:flutter_web/widgets/menu_drawer.dart';
-import 'package:flutter_web/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  static const String id = 'home_page';
+import '../widgets/bottom_bar.dart';
+import '../widgets/featured_heading.dart';
+import '../widgets/featured_tiles.dart';
+import '../widgets/menu_drawer.dart';
+import '../widgets/top_bar_contents.dart';
+
+class LibraryPage extends StatefulWidget {
+  static const String id = 'library_page';
+
+  const LibraryPage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<LibraryPage> createState() => _LibraryPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LibraryPageState extends State<LibraryPage> {
   final ScrollController _scrollController = ScrollController();
+
   double _scrollPosition = 0;
   double _opacity = 0;
 
@@ -83,8 +84,23 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Column(
                   children: [
-                    FloatingQuickAccessBar(
-                      screenSize: screenSize,
+                    SizedBox(height: screenSize.height / 1.4),
+                    Text(
+                      'My Library',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xff033c75),
+                      ),
+                    ),
+                    SizedBox(height: screenSize.height / 25),
+                    Text(
+                      'My Reading Brain',
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xff05756c),
+                      ),
                     ),
                     FeaturedHeading(
                       screenSize: screenSize,
@@ -94,10 +110,6 @@ class _HomePageState extends State<HomePage> {
                     FeaturedTiles(
                       screenSize: screenSize,
                     ),
-                    MainHeading(
-                      screenSize: screenSize,
-                    ),
-                    MainCarousel(),
                     SizedBox(height: screenSize.height / 10),
                     BottomBar(),
                   ],
