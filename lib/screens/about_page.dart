@@ -87,7 +87,7 @@ class _AboutPageState extends State<AboutPage> {
                       'About',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         color: Color(0xff033c75),
                       ),
                     ),
@@ -96,8 +96,20 @@ class _AboutPageState extends State<AboutPage> {
                       'My Reading Brain',
                       style: TextStyle(
                         fontSize: 40,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         color: Color(0xff05756c),
+                      ),
+                    ),
+                    SizedBox(height: screenSize.height / 10),
+                    Text(
+                      'This is an author website example. Everyone is on a journey, and'
+                      '\n  everyone has a story to share. He is traveling there with you.'
+                      '\n  The initial stages of the author\'s journey are remembered in '
+                      '\n  this website. To present it, you may use the website like this.',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xff033c75),
                       ),
                     ),
                     SizedBox(height: screenSize.height / 10),
