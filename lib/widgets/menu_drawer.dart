@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/screens/about_page.dart';
 import 'package:flutter_web/screens/home_page.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -9,7 +8,9 @@ class MenuDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width * 0.50;
     return Drawer(
+      width: width,
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -61,7 +62,44 @@ class MenuDrawer extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => Navigator.pushNamed(
+                  context,
+                  '/library',
+                ),
+                child: Text(
+                  'Library',
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                child: Divider(
+                  color: Colors.blueGrey.shade400,
+                  thickness: 2,
+                ),
+              ),
+              InkWell(
+                onTap: () => Navigator.pushNamed(
+                  context,
+                  '/history',
+                ),
+                child: Text(
+                  'History',
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                child: Divider(
+                  color: Colors.blueGrey.shade400,
+                  thickness: 2,
+                ),
+              ),
+              InkWell(
+                onTap: () => Navigator.pushNamed(
+                  context,
+                  '/reviews',
+                ),
                 child: Text(
                   'Read',
                   style: TextStyle(color: Colors.white, fontSize: 22),

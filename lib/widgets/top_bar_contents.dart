@@ -175,7 +175,10 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[3] = true : _isHovering[3] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      '/history',
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -211,7 +214,10 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[4] = true : _isHovering[4] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      '/reviews',
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
